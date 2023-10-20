@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        nav {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px 20px 20px 20px;
+            color: white;
+            font-size: larger;
+            font-style: bold;
+            background-color: white;
+        }
+
+        form {
+            text-align: center;
+            float: center;
+            margin: 30px 0 0 0;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        ul  {
+            margin: 30px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#">HOME</a> |
+        <a href="#">TRANSACTION HISTORY</a> |
+        <a href="#">POLICY</a> |
+        <a href="#">LOG OUT</a>
+    </nav>
+    <!-- NAVBAR SELESAI -->
+    <!-- CONTENT -->
+<ul>
+<table align="left">
+    <tr>
+        <td><img src="kolase sepatu.jpg" alt="kolase sepatu" width="400px"></td>
+    </tr>
+</table>
+<form action="hasil.html">
+<table align="center">
+    <td><label for="nama">Nama Pemesan  :</label><br>
+    <input type="text" required />
+    <br>
+    <br>
+    <label for="warna">Pilih Warna  :</label><br>
+    <input type="checkbox" name="merah" id="merah" value="merah" />Merah
+    <input type="checkbox" name="biru" id="biru" value="biru" />biru
+    <input type="checkbox" name="orange" id="orange" value="orange" />Orange
+    <input type="checkbox" name="gray" id="gray" value="gray" />Gray
+    <br>
+    <br>
+    <label for="size">Size  :</label><br>
+    <select name="size" id="size">
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+    </select>
+    <br>
+    <br>
+    <label for="jumlah">Jumlah  :</label><br>
+    <input type="number" required />
+    <br>
+    <br>
+    <label for="catatan">Alamat    :</label><br>
+    <textarea cols="30" rows="5"></textarea>
+    <br>
+    <br>
+    <label for="rekening">Nomor Rekening    :</label><br>
+    <input type="text" required />
+    <br>
+    <br>
+    <label for="bank">Bank  :</label><br>
+    <select name="bank" id="bank">
+        <option value="BCA">BCA</option>
+        <option value="BRI">BRI</option>
+        <option value="MANDIRI">MANDIRI</option>
+    </select>
+    <br>
+    <br>
+    <label for="text">Atas Nama</label><br>
+    <input type="text" required />
+    <br>
+    <br>
+    <label for="nomor antrian">Upload Resi Pembayaran</label><br>
+    <input type="file" required>
+    <br>
+    <br>
+    <label for="perizinan"></label>
+    <input type="checkbox" name="perizinan" id="kirim ke ponsel" value="kirim ke ponsel" />kirim ke ponsel<br>
+    <input type="checkbox" name="perizinan" id="kirim ke email" value="kirim ke email" />kirim ke email<br>
+    <br>
+    <br>
+    <input type="submit" value="Pesan"></td>
+</table>
+</form>
+</body>
+</html>
