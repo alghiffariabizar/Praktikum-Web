@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            padding: 20px;
+        }
+        label {
+            margin: 20px;
+            padding: 20px;
+        }
+        button {
+            background-color: green;
+            margin: 0 0 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend><b>Form Registrasi Rekreasi Kuliner</b></legend>
+        <!-- BUAT FORM -->
+        <form action="UTS.html">
+        <table>
+            <tr>
+                <!-- INPUT NAMA -->
+                <td><label for="nama">Nama Tempat Wisata<td>:</td>
+                </label></td>
+                <td> <input type="text" name="nama" id="nama" required></td>
+                <!-- INPUT NAMA END -->
+            </tr>
+            <tr>
+                <!-- INPUT JENIS WISATA -->
+                <td><label for="jenis">Jenis Wisata<td>:</td></label></td>
+                <td><select name="jenis" id="jenis">
+                    <option value="kedai kopi">Kedai Kopi</option></select></td>
+                <!-- INPUT JENIS WISATA END -->
+            </tr>
+            <tr>
+                <!-- INPUT DESKRIPSI -->
+                <td><label for="deskripsi">Deskripsi Wisata<td>:</td></label></td>
+                <td><textarea name="deskripsi" id="deskripsi" cols="20" rows="5"></textarea></td>
+                <!-- INPUT DESKRIPSI END -->
+            </tr>
+            <tr>
+                <!-- INPUT KONTAK -->
+                <td><label for="kontak">Kontak Person<td>:</td></label></td>
+                <td><input type="text" name="kontak" id="kontak" required></td>
+                <!-- INPUT KONTAK END -->
+            </tr>
+            <tr>
+                <!-- INPUT NO HP -->
+                <td><label for="no hp">No HP/Telepon<td>:</td></label></td>
+                <td><input type="number" name="no hp" id="no hp"></td>
+                <!-- INPUT NO HP END -->
+            </tr>
+            <tr>
+                <!-- INPUT EMAIL -->
+                <td><label for="email">Email<td>:</td></label></td>
+                <td><input type="text" name="email" id="email"></td>
+                <!-- INPUT EMAIL END -->
+            </tr>
+            <tr>
+                <!-- INPUT ALAMAT WEB -->
+                <td><label for="alamat web">Alamat Web<td>:</td></label></td>
+                <td><input type="text" name="alamat web" id="alamat web"></td>
+                <!-- INPUT ALAMAT WEB END -->
+            </tr>
+            <tr>
+                <!-- INPUT ALAMAT -->
+                <td><label for="alamat">Alamat Lengkap<td>:</td></label></td>
+                <td><textarea name="alamat" id="alamat" cols="20" rows="5"></textarea></td>
+                <!-- INPUT ALAMAT END -->
+            </tr>
+            <tr>
+                <!-- INPUT LATITUDE -->
+                <td><label for="latitude">Latitude, Longitude<td>:</td></label></td>
+                <td><input type="text" name="latitude" id="latitude"></td>
+                <!-- INPUT LATITUDE END -->
+            </tr>
+    </table>
+    <!-- BUAT TOMBOL -->
+        <button>Daftar</button>
+        <button>Batal</button>
+    <!-- BUAT TOMBOL END -->
+    </form>
+    </fieldset>
+</body>
+</html>
