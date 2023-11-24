@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX 2</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        display: flex;
+        flex: 1;
+      }
+
+      nav {
+        background-color: red;
+        width: 50vh;
+        height: 100vh;
+      }
+
+      header,
+      footer {
+        background-color: magenta;
+        width: 150vh;
+        height: 20vh;
+      }
+
+      .content {
+        display: flex;
+        flex: 3;
+      }
+
+      article {
+        background-color: white;
+        width: 95vh;
+        height: 60vh;
+      }
+
+      aside {
+        background-color: aqua;
+        width: 55vh;
+        height: 60vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>NAV</nav>
+      <div>
+        <header>HEADER</header>
+        <div class="content">
+          <article>ARTICLE</article>
+          <aside>ASIDE</aside>
+        </div>
+        <footer>FOOTER</footer>
+      </div>
+    </div>
+  </body>
+</html>
