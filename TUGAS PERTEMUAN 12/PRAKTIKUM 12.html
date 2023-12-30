@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <style>
+        table {
+            display: flex;
+            justify-content: center;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="time"] {
+            width: 100%;
+            padding: 7px;
+            margin: 5px;
+            border-radius: 4px;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            margin: auto;
+            background-color: rgb(26, 223, 26);
+            color: black;
+            border-radius: 7px;
+            width: 70px;
+            height: 30px;
+        }
+
+        #hasil {
+            text-align: center;
+            padding-left: 65px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Form Validasi</h1>
+    <form action="#" method="" onsubmit="validateForm(event)">
+        <table>
+            <tr>
+                <td>
+                    <!-- INPUT NAMA -->
+                    <div class="form-group row" />
+                        <label class="col-4 col-form-label" for="">Nama</label>
+                    <div class="col-8" />
+                </td>
+                <td>
+                    <input
+                        id="nama"
+                        name="nama"
+                        placeholder="Nama"
+                        type="text"
+                        class="form-control"
+                        min="4"
+                        max="30"
+                        required="required" />
+                        
+                    <div id="namaError" class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- INPUT EMAIL -->
+                    <div class="form-group row" />
+                        <label for="text" class="col-4 col-form-label">Email</label>
+                    <div class="col-8">
+                </td>
+                <td>
+                    <input
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        type="text"
+                        class="form-control"
+                        required="required" />
+
+                    <div id="emailError" class="error"></div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- INPUT JAM KEBERANGKATAN -->
+                    <div class="form-group row" />
+                        <label for="text" class="col-4 col-form-label">Jam</label>
+                    <div class="col-8" />
+                </td>
+                <td>
+                    <input
+                        id="jam"
+                        name="jam"
+                        placeholder="Jam"
+                        type="time"
+                        class="form-control"
+                        required="required" />
+
+                    <div id="jamError" class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- INPUT TUJUAN -->
+                    <div class="form-group row" />
+                        <label for="text1" class="col-4 col-form-label">Tujuan</label>
+                    <div class="col-8"></div />
+                </td>
+                <td>
+                    <input
+                        id="tujuan"
+                        name="tujuan"
+                        placeholder="Tujuan"
+                        type="text"
+                        class="form-control"
+                        required="required" />
+
+                    <div id="tujuanError" class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- INPUT JUMLAH TIKET -->
+                    <div class="form-group row" />
+                        <label for="text1" class="col-4 col-form-label">Jumlah Tiket</label>
+                    <div class="col-8" />
+                </td>
+                <td>
+                    <input
+                        id="tiket"
+                        name="tiket"
+                        placeholder="Tiket"
+                        type="number"
+                        class="form-control"
+                        min="1"
+                        max="10"
+                        required="required" />
+
+                    <div id="tiketError" class="error"></div>
+                </td>
+            </tr>
+        </table>
+    <br>
+                    <!-- TOMBOL SUBMIT -->
+                    <div class="submit">
+                        <button name="submit" type="submit">Submit</button></div>
+                    <!-- HASIL -->
+                    <span id="hasil"></span>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+
+        document.getElementById('namaError').innerText = '';
+        document.getElementById('emailError').innerText = '';
+        document.getElementById('jamError').innerText = '';
+        document.getElementById('tujuanError').innerText = '';
+        document.getElementById('tiketError').innerText = '';
+
+        let nama = document.getElementById("nama").value;
+        let email = document.getElementById("email").value;
+        let jam = document.getElementById("jam").value;
+        let tujuan = document.getElementById("tujuan").value;
+        let tiket = document.getElementById("tiket").value;
+        let valid = true;
+
+
+        // VALIDASI
+        if (nama.length > 30) {
+            document.getElementById('namaError').innerText = 'Error: Nama tidak boleh lebih dari 30 karakter.';
+            valid = false;
+        } else {
+            document.getElementById('namaError').innerText = '';
+        }
+
+        if (email.includes("@")) {
+            document.getElementById('emailError').innerText = '';
+        } else {
+            document.getElementById('emailError').innerText = 'Error: Inputan email salah';
+            valid = false;
+        }
+
+        if (jam === "") {
+            document.getElementById('jamError').innerText = 'Error: Jam keberangkatan harus diisi.';
+            valid = false;
+        }
+
+        if (tujuan === "") {
+            document.getElementById('tujuanError').innerText = 'Error: Tujuan keberangkatan harus diisi.';
+            valid = false;
+        }
+
+        if (tiket === "") {
+            document.getElementById('tiketError').innerText = 'Error: Jumlah tiket harus diisi.';
+            valid = false;
+        }
+
+        // TAMPILAN HASIL INPUT
+        if (valid) {
+            resultContainer = document.getElementById('hasil');
+            resultContainer.innerHTML = '<p>Form Validasi Sukses!</p>' +
+                                         '<p>Nama: ' + nama + '</p>'+
+                                         '<p>Email: ' + email + '</p>'+
+                                         '<p>Jam Keberangkatan: ' + jam + '</p>'+
+                                         '<p>Tujuan Keberangkatan: ' + tujuan + '</p>'+
+                                         '<p>Jumlah Tiket: ' + tiket + '</p>';
+        }
+    }
+</script>
+</body>
+</html>
