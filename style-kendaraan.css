@@ -1,0 +1,53 @@
+.user-panel {
+    border-bottom: 0 !important;
+}
+
+.form-inline, .data {
+    padding-bottom: 1rem;
+}
+
+.custom-radio {
+    gap: 2rem;
+}
+
+.radio-kendaraan {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bullet-kendaraan {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.card-add {
+    position: absolute;
+    top: 50px;
+}
+
+.status {
+    border-width: 0 !important;
+}
+
+select {
+    font-weight: bold !important;
+}
+
+table, th, td {
+  border: 2px solid black !important;
+  border-collapse: collapse;
+}
+
+
+thead, tbody, tr, th, td {
+    width: 100vw;
+    text-align: center;
+}
+
+.table-data {
+    background-color: #fff;
+    color: black;
+}
